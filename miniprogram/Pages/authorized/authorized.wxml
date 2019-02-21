@@ -1,0 +1,30 @@
+<!--miniprogram/Pages/authorized/authorized.wxml-->
+<view class='authorized-page' style=''>
+  <view class='card-top'>
+    <image class='icon-learn' src='assets/learn.svg'></image>
+  </view>
+  <view class='card-bottom'>
+    <view class='footer'>
+      <view class='line'></view>
+      <text class='foot-text'>科查查</text>
+      <view class='line'></view>
+    </view>
+  </view>
+  <view class='float-login-box'>
+    <view id='wechat_authorized' class='login-box' wx:if='{{!wxAuthorized}}'>
+      <button class='btn-wechat-authorized' open-type='getUserInfo' bindgetuserinfo='userAuthorized'><image class='icon-wechat' src='assets/wechat.svg'></image></button>
+      <text>点击图标，绑定微信</text>
+    </view>
+    <view id='wechat_authorized' class='login-box' wx:if='{{wxAuthorized}}'>
+      <view class='view-input'>
+        <image src='assets/account.svg' class='icon-input'></image>
+        <input type='text' placeholder='请输入学号' confirm-type='next'></input>
+      </view>
+      <view class='view-input'>
+        <image src='assets/password.svg' class='icon-input'></image>
+        <input type='text' password='true' placeholder='请输入密码' placeholder-class='input-placeholder' confirm-type='done'></input>
+      </view>
+      <button class='btn-login'>登录</button>
+    </view>
+  </view>
+</view>
