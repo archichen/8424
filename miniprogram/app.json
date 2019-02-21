@@ -1,6 +1,7 @@
 {
   "pages": [
-    "Pages/authorized/authorized"
+    "Pages/authorized/authorized",
+    "Pages/overview/overview"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",

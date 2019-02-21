@@ -11,7 +11,8 @@
 .card-top {
   height: 45%;
   width: 100%;
-  background: radial-gradient(circle,#87a1f9, #6f8bf3);
+  /* background: radial-gradient(circle,#87a1f9, #6f8bf3); */
+  background: #6f8bf3;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -75,7 +76,7 @@
 
 .foot-text {
   font-size: 30rpx;
-  width: 200rpx;
+  width: 300rpx;
   text-align: center;
   color: #dadbdb;
 }
@@ -112,19 +113,19 @@ input {
   border-bottom: 1px solid #dadbdb;
 }
 
-/* .input-placeholder {
-  padding-left: 30rpx;
-} */
-
 .btn-login {
   width: 400rpx;
   height: 100rpx;
   border-radius: 300rpx;
-  background: radial-gradient(circle,#87a1f9, #6f8bf3);
   color: white;
   margin-top: 30rpx;
+  background: radial-gradient(circle, #8ca7ff 20%, #6f8bf3);
 }
 
 .btn-login::after {
   border: none;
+}
+
+.btn-login-hover {
+  background: radial-gradient(circle, #8ca7ff 60%, #6f8bf3);
 }

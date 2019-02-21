@@ -1,0 +1,75 @@
+<!--miniprogram/Pages/overview/overview.wxml-->
+<view class='student_card'>
+  <view class='image_text_wrapper'>
+    <view class='student_info_view'>
+      <text class='name'>{{studentInfo.name}}</text>
+      <text>{{studentInfo.year}}</text>
+      <text>{{studentInfo.major}}</text>
+    </view>
+    <view class='head_img_view'>
+      <image class='head_img' mode='aspectFill' src='{{studentInfo.head_url}}'></image>
+    </view>
+  </view>
+  <view class='line'></view>
+  <view class='scores'>
+    <text class='small_font'>绩点：{{studentInfo.scores.credit}}</text>
+    <text class='small_font'>学分：{{studentInfo.scores.gpa}}</text>
+    <text class='small_font'>志愿时间：{{studentInfo.scores.volunteer_time}} H</text>
+  </view>
+</view>
+
+<scroll-view class='scroll-panel' scroll-y='true' enable-back-to-top='true'>
+  <view class='footer-panel'>
+    <view class='footer'>
+      <view class='line'></view>
+      <text class='foot-text'>风险评估</text>
+      <view class='line'></view>
+    </view>
+  </view>
+
+  <view class='comment-panel'>
+    <icon type='{{canGraduate === true ? "success" : "warn"}}' size='50'></icon>
+    <text class='comment'>{{canGraduate === true ? comments[1] : comments[0]}}</text>
+  </view>
+
+  <view class='list'>
+    <view class='item'>
+      <view class='content'>
+        <view class='title'>
+          <image src='assets/circles/1.svg' class='point'></image>
+          <text class='text'>成绩分析</text>
+        </view>
+        <view class='description'>通过多种图表展现，纵横比较成绩数据。并生成简单的分析报告。</view>
+      </view>
+      <view class='right-arrow-view'>
+        <image src='assets/right-arrow.svg' class='right-arrow'></image>
+      </view>
+    </view>
+
+    <view class='item'>
+      <view class='content'>
+        <view class='title'>
+          <image src='assets/circles/2.svg' class='point'></image>
+          <text class='text'>发展方向推荐</text>
+        </view>
+        <view class='description'>使用大数据技术，通过对历年毕业生数据采集和挖掘，生成属于你的最接近成功的发展路线。</view>
+      </view>
+      <view class='right-arrow-view'>
+        <image src='assets/right-arrow.svg' class='right-arrow'></image>
+      </view>
+    </view>
+
+    <view class='item'>
+      <view class='content'>
+        <view class='title'>
+          <image src='assets/circles/3.svg' class='point'></image>
+          <text class='text'>巴啦啦小魔仙</text>
+        </view>
+        <view class='description'>巴啦啦能量—沙罗沙罗—小魔仙—全身变 巴啦啦能量－呼尼拉－魔仙变身 巴拉拉能量—华沙加鲁—起 巴拉拉能量—哗哗必—转移 巴啦啦能量—鸣啦呜-旋风</view>
+      </view>
+      <view class='right-arrow-view'>
+        <image src='assets/right-arrow.svg' class='right-arrow'></image>
+      </view>
+    </view>
+  </view>
+</scroll-view>
