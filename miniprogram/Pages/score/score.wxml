@@ -1,0 +1,59 @@
+<view>
+  <view class='title'>
+    {{selectorRange[selectIndex]}}
+  </view>
+
+  <view class='item'>
+    <progress percent='80' stroke-width='10' border-radius='10' backgroundColor='#272049' />
+    <text>数据结构</text>
+  </view>
+
+  <view class='item'>
+    <progress percent='52' stroke-width='10' border-radius='10' backgroundColor='#272049' activeColor='red' />
+    <text>计算机操作系统</text>
+  </view>
+
+  <view class='item'>
+    <progress percent='63' stroke-width='10' border-radius='10' backgroundColor='#272049' activeColor='#FF9800' />
+    <text>软件工程</text>
+  </view>
+
+  <view class='item'>
+    <progress percent='74' stroke-width='10' border-radius='10' backgroundColor='#272049' />
+    <text>数据库原理</text>
+  </view>
+
+  <view class='item'>
+    <progress percent='95' stroke-width='10' border-radius='10' backgroundColor='#272049' />
+    <text>Web应用开发技术基础</text>
+  </view>
+
+  <view class='item'>
+    <progress percent='95' stroke-width='10' border-radius='10' backgroundColor='#272049' />
+    <text>LINUX操作系统</text>
+  </view>
+
+  <view class='item'>
+    <progress percent='69' stroke-width='10' border-radius='10' backgroundColor='#272049' activeColor='#FF9800' />
+    <text>算法语言基础</text>
+  </view>
+
+  <view class='item'>
+    <progress percent='100' stroke-width='10' border-radius='10' backgroundColor='#272049' />
+    <text>大学英语</text>
+  </view>
+
+  <view class='setting' bindtap='openSetting'>
+  <picker mode='selector' bindchange='doChange' range='{{selectorRange}}'>
+    <view>
+      <image class='setting-btn' src='./assets/setting.png'></image>
+    </view>
+  </picker>
+  </view>
+
+  <view class='next'>
+    <image class='setting-btn' src='./assets/right-arrow.png'></image>
+  </view>
+
+  
+</view>

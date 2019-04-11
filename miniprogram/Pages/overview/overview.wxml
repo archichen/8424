@@ -33,7 +33,7 @@
   </view>
 
   <view class='list'>
-    <view class='item'>
+    <view class='item' bindtap='loadScorePage'>
       <view class='content'>
         <view class='title'>
           <image src='assets/circles/1.svg' class='point'></image>

@@ -1,6 +1,7 @@
 {
   "pages": [
     "Pages/authorized/authorized",
+    "Pages/score/score",
     "Pages/overview/overview"
   ],
   "window": {
@@ -9,5 +10,6 @@
     "navigationBarBackgroundColor": "#F6F6F6",
     "navigationBarTitleText": "云开发 QuickStart",
     "navigationBarTextStyle": "black"
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }
