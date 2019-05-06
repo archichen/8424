@@ -1,0 +1,13 @@
+<!--miniprogram/Pages/yujing/yujingfenxi/yujingfenxi.wxml-->
+<view class='card'>
+  <view class='tr'>
+    <text class='td'>课程名</text>
+    <text class='td'>学分</text>
+    <text class='td'>预警级别</text>
+  </view>
+  <view class='tr'>
+    <text class='td'>无挂科预警</text>
+  </view>
+</view>
+
+<icon type='success' size='100'></icon>

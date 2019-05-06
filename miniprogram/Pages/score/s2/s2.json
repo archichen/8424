@@ -4,6 +4,6 @@
   "navigationBarTextStyle": "white",
   "backgroundColor": "#272049",
   "usingComponents": {
-    "ec-canvas": "../../ec-canvas/ec-canvas"
+    "ec-canvas": "../../../ec-canvas/ec-canvas"
   }
 }

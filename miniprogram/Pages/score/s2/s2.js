@@ -1,5 +1,5 @@
 // miniprogram/Pages/score/score.js
-import * as echarts from '../../ec-canvas/echarts';
+import * as echarts from '../../../ec-canvas/echarts';
 const app = getApp();
 
 Page({
@@ -24,25 +24,35 @@ Page({
       selectIndex: e.detail.value
     });
     let scores = this.getScoresPie(this.data.selectorRange[e.detail.value]);
-    console.log(scores)
+    let x = scores.map(e => e.name);
+    let y = scores.map(e => e.value);
     this.chart.setOption({
-      series: [
-        {
-          name: '课程成绩',
-          type: 'pie',
-          radius: '55%',
-          center: ['50%', '60%'],
-          data: scores,
-          itemStyle: {
-            emphasis: {
-              shadowBlur: 10,
-              shadowOffsetX: 0,
-              shadowColor: 'rgba(0, 0, 0, 0.5)'
-            }
-          }
+      textStyle: {
+        color: "#fff"
+      },
+      xAxis: {
+        type: 'category',
+        boundaryGap: false,
+        data: x,
+        axisLabel: {
+          rotate: 90
         }
-      ]
+      },
+      yAxis: {
+        type: 'value'
+      },
+      series: [{
+        data: y,
+        type: 'line',
+        areaStyle: {}
+      }] 
     });
+  },
+
+  next() {
+    wx.navigateTo({
+      url: '../s1/s1',
+    })
   },
   
   /**
@@ -67,32 +77,19 @@ Page({
         height: height
       });
       let option = {
-        tooltip: {
-          trigger: 'item',
-          formatter: "{b} : {c} ({d}%)"
+        xAxis: {
+          type: 'category',
+          boundaryGap: false,
+          data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
         },
-        series: [
-          {
-            name: '访问来源',
-            type: 'pie',
-            radius: '55%',
-            center: ['50%', '60%'],
-            data: [
-              { value: 335, name: '直接访问' },
-              { value: 310, name: '邮件营销' },
-              { value: 234, name: '联盟广告' },
-              { value: 135, name: '视频广告' },
-              { value: 1548, name: '搜索引擎' }
-            ],
-            itemStyle: {
-              emphasis: {
-                shadowBlur: 10,
-                shadowOffsetX: 0,
-                shadowColor: 'rgba(0, 0, 0, 0.5)'
-              }
-            }
-          }
-        ]
+        yAxis: {
+          type: 'value'
+        },
+        series: [{
+          data: [820, 932, 901, 934, 1290, 1330, 1320],
+          type: 'line',
+          areaStyle: {}
+        }]
       };
 
       this.chart.setOption(option);
@@ -129,12 +126,6 @@ Page({
       }
     }
     return result;
-  },
-
-  next() {
-    wx.navigateTo({
-      url: './s2/s2',
-    })
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

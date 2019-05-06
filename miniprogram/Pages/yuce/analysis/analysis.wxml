@@ -1,0 +1,12 @@
+<!--miniprogram/Pages/yuce/analysis/analysis.wxml-->
+<view class='title'>
+  <text>需要提升科目的详细报告</text>
+</view>
+<view class='card' wx:key wx:for="{{_data}}">
+  <text class='card-title'>{{item.name}}</text>
+  <view class='card-list'>
+    <view class='card-item' wx:key wx:for="{{item.courses}}" wx:for-item='c'>
+      <text class='card-text'>{{c}}</text>
+    </view>
+  </view>
+</view>

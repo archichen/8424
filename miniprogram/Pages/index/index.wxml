@@ -1,0 +1,48 @@
+<!--miniprogram/Pages/index/index.wxml-->
+<image src='./assets/titlebar.png' class='titlebar' mode='widthFix'></image>
+
+<swiper class="screen-swiper square-dot" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500"
+ indicator-active-color="#46B8FF">
+  <swiper-item wx:for="{{swiperImgs}}" wx:key>
+    <image src="{{item}}" mode="aspectFill"></image>
+  </swiper-item>
+</swiper>
+
+<view class='line'>
+  <view></view>
+  <text>科查查让你大学不迷茫</text>
+  <view></view>
+</view>
+
+<view class='btn-group'>
+  <view class='btn1 btn' bindtap='loadOverViewPage'>
+    <view class='btn-group-text'>
+      <text style='font-weight: bold; font-size: 35rpx'>个人信息</text>
+      <text style='opacity: 0.5'>Personal information</text>
+      <!-- <image src='./assets/19098-true.png' mode='widthFix' style='margin-top: 50rpx'></image> -->
+    </view>  
+  </view>
+  <view class='btn-group2'>
+    <view class='btn-group3'>
+      <view class='btn3 btn' bindtap='loadYujingPage'>
+        <view class='btn-group-text'>
+        <text style='font-weight: bold; font-size: 35rpx'>课程预警</text>
+        <text style='opacity: 0.5'>Course prediction</text>
+        </view>  
+      </view>
+      <view class='btn4 btn'>
+        <view class='btn-group-text'>
+        <text style='font-weight: bold; font-size: 35rpx'>人物画像</text>
+        <text style='opacity: 0.5'>Portrait of character</text>
+        </view>  
+      </view>
+    </view>
+    <view class='btn2 btn' bindtap='loadYucePage'>
+      <view class='btn-group-text'>
+        <text style='font-weight: bold; font-size: 35rpx'>发展预测</text>
+        <text style='opacity: 0.5'>Personal information</text>
+        <!-- <image src='./assets/59749-true.png' mode='aspectFit' style='position:absolute;height: 150rpx;width: 150rpx;align-self: flex-end'></image> -->
+      </view>  
+    </view>
+  </view>
+</view>

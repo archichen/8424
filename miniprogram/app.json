@@ -1,7 +1,14 @@
 {
   "pages": [
-    "Pages/authorized/authorized",
+  "Pages/authorized/authorized",
+   "Pages/index/index",
+    "Pages/yujing/yujing",
+    "Pages/yujing/yujingfenxi/yujingfenxi",
+    "Pages/yuce/yuce",
+    "Pages/yuce/analysis/analysis",
+    "Pages/yuce/charts/charts",
     "Pages/score/score",
+    "Pages/score/s2/s2",
     "Pages/overview/overview"
   ],
   "window": {

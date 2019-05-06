@@ -26,7 +26,7 @@
         <image src='assets/password.svg' class='icon-input'></image>
         <input bindinput='input_password' type='text' password='true' placeholder='请输入密码' placeholder-class='input-placeholder' confirm-type='done'></input>
       </view>
-      <button class='btn-login' hover-class='btn-login-hover' bindtap='login'>登录</button>
+      <button class='btn-login' hover-class='btn-login-hover' bindtap='login'><text>登录</text></button>
     </view>
   </view>
 </view>

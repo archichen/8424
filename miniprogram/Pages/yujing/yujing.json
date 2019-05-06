@@ -1,0 +1,9 @@
+{
+  "navigationBarBackgroundColor": "#46b8ff",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "课程通过预警",
+  "backgroundColor": "white",
+  "usingComponents": {
+    "ec-canvas": "../../ec-canvas/ec-canvas"
+  }
+}

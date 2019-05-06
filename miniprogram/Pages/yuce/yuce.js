@@ -1,32 +1,29 @@
-// miniprogram/Pages/overview/overview.js
-const app = getApp();
+// miniprogram/Pages/fazhanyuce/fazhanyuce.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    canGraduate: true,
-    comments: [
-      "不能正常毕业",
-      "可以正常毕业"
-    ]
+
   },
 
-  loadScorePage: function(e) {
-    wx.navigateTo({
-      url: '../score/score',
-    })
+  loadChartsPage(param) {
+    if (param.currentTarget.dataset.type === 'ky') {
+      wx.navigateTo({
+        url: './charts/charts?type=ky',
+      });
+    } else {
+      wx.navigateTo({
+        url: './charts/charts?type=rd',
+      })
+    }
   },
-
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.setData({
-      studentInfo: app.globalData.studentInfo,
-      canGraduate: app.globalData.studentInfo.gpa >= 2.0 ? true: false
-    });
+
   },
 
   /**
@@ -40,6 +37,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+
   },
 
   /**

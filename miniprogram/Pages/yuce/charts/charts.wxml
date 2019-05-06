@@ -1,0 +1,11 @@
+<view>
+  <view class='echarts-container'>
+      <ec-canvas class="mychart-dom-bar" id='chart1' canvas-id="mychart-bar" ec="{{ ec }}"></ec-canvas>
+  </view>
+
+    <view class='echarts-container'>
+      <ec-canvas class="mychart-dom-bar" id='chart2' canvas-id="mychart-bar" ec="{{ ec }}"></ec-canvas>
+  </view>
+
+  <button bindtap='loadAnalysisPage'>查看详细分析</button>
+</view>

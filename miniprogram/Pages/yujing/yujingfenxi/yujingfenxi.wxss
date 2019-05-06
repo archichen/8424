@@ -1,0 +1,30 @@
+/* miniprogram/Pages/yujing/yujingfenxi/yujingfenxi.wxss */
+Page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.card {
+  margin-top: 50rpx;
+  background: white;
+  width: 80%;
+  border-radius: 10rpx;
+}
+
+.tr {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 20rpx;
+}
+
+.tr:first-child {
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: #999999;
+}
+
+icon {
+  position: absolute;
+  bottom: 100rpx;
+}

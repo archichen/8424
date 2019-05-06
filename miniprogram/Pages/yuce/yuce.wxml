@@ -1,0 +1,7 @@
+<!--miniprogram/Pages/fazhanyuce/fazhanyuce.wxml-->
+<image class='pig' mode='aspectFit' src='https://s2.ax1x.com/2019/05/06/EDcJ0O.png'></image>
+<view class='btn-group'>
+  <text style='font-weight: bold; align-self: flex-start;margin-bottom: 25rpx;font-size: 30rpx'>选择预测方向</text>
+  <button class='btn' bindtap='loadChartsPage' data-type='ky'>考研成功率预测</button>
+  <button class='btn' bindtap='loadChartsPage' data-type='rd'>入党推优成功率预测</button>
+</view>

@@ -1,0 +1,13 @@
+<view class='echarts-container'>
+  <ec-canvas id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ ec }}"></ec-canvas>
+</view>
+
+<view class='down'>
+  <view class='title'>
+    课程通过预警
+  </view>
+  <view class='text'>
+    图表显示了课程之间的依赖关系，箭头的指向代表了学习该课程需要的预备课程。
+  </view>
+  <button class='btn' bindtap='loadYujingfenxiPage'>点击查看预警信息</button>
+</view>

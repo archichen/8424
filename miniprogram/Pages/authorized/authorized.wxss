@@ -120,6 +120,9 @@ input {
   color: white;
   margin-top: 30rpx;
   background: radial-gradient(circle, #8ca7ff 20%, #6f8bf3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .btn-login::after {

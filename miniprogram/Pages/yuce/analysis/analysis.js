@@ -1,4 +1,5 @@
-// miniprogram/Pages/overview/overview.js
+// miniprogram/Pages/yuce/analysis/analysis.js
+let type = 'rd';
 const app = getApp();
 Page({
 
@@ -6,26 +7,26 @@ Page({
    * 页面的初始数据
    */
   data: {
-    canGraduate: true,
-    comments: [
-      "不能正常毕业",
-      "可以正常毕业"
-    ]
-  },
-
-  loadScorePage: function(e) {
-    wx.navigateTo({
-      url: '../score/score',
-    })
+    
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    console.log(options)
+    let d = [];
+    if (options.type === "ky") {
+      app.globalData.yuce['ky'].forEach(item => {
+        d.push({ name: item['schooltype'], courses: item['courses']});
+      });
+    } else {
+      app.globalData.yuce['rd'].forEach(item => {
+        d.push({ name: '入党推优', courses: item['courses'] });
+      });
+    }
     this.setData({
-      studentInfo: app.globalData.studentInfo,
-      canGraduate: app.globalData.studentInfo.gpa >= 2.0 ? true: false
+      _data: d
     });
   },
 
@@ -40,6 +41,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+
   },
 
   /**

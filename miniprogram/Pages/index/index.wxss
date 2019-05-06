@@ -1,0 +1,117 @@
+Page {
+  background: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.titlebar {
+  width: 100%;
+
+}
+
+swiper {
+  margin: 30rpx 50rpx 30rpx 50rpx;
+  border-radius: 20rpx;
+  box-shadow: 0 10rpx 20px 0 #46b8ff63;
+}
+
+swiper-item {
+  border-radius: 20rpx;
+}
+
+.line {
+  color: #999999;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding: 50rpx;
+}
+
+.line view {
+  background: #999999;
+  height: 1px;
+  width: 150rpx;
+}
+
+.btn-group {
+  display: flex;
+  flex-direction: row;
+  margin: 0 50rpx 0 50rpx;
+  height: 350rpx;
+  align-self: center;
+}
+
+.btn-group2 {
+  display: flex;
+  flex-direction: column;
+  width: 425rpx;
+}
+
+.btn-group3 {
+  display: flex;
+  flex-direction: row;
+  height: 200rpx;
+  margin-bottom: 25rpx;
+}
+
+.btn {
+  transition: all 0.1s;
+}
+
+.btn1 {
+  width: 200rpx;
+  background: linear-gradient(135deg, #def6ff, #95cbfa);
+  color: #2398ff;
+  border-radius: 20rpx;
+  margin-right: 25rpx;
+}
+
+.btn1:active {
+  background: linear-gradient(135deg, #def6ff, #42a7ff);
+  box-shadow: 0 0 40rpx 0 #95cbfa;
+}
+
+.btn2 {
+  height: 200rpx;
+  background: linear-gradient(135deg, #ffefed, #ffb5ae);
+  color: #ff897e;
+  border-radius: 20rpx;
+}
+
+.btn2:active {
+  background: linear-gradient(135deg, #ffefed, #f8776b);
+  box-shadow: 0 0 40rpx 0 #ffb5ae;
+}
+
+.btn3, .btn4 {
+  width: 200rpx;
+  border-radius: 20rpx;
+}
+
+.btn3 {
+  margin-right: 25rpx;
+  background: linear-gradient(135deg, #d0fef6, #7fdac5);
+  color: #23c29d
+}
+
+.btn3:active {
+  background: linear-gradient(135deg, #d0fef6, #39d4b0);
+  box-shadow: 0 0 40rpx 0 #7fdac5;
+}
+
+.btn4 {
+  background: linear-gradient(135deg, #ffe7fc, #ca71e0);
+  color: #d83cff;
+}
+
+.btn4:active {
+  background: linear-gradient(135deg, #ffe7fc, #d247f5);
+  box-shadow: 0 0 40rpx 0 #ca71e0;
+}
+
+.btn-group-text {
+  margin: 20rpx;
+  display: flex;
+  flex-direction: column;
+}

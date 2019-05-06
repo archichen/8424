@@ -1,6 +1,4 @@
 // miniprogram/Pages/authorized/authorized.js
-const apis = require('../../utils/apis.js').apis;
-
 const app = getApp();
 
 Page({
@@ -40,7 +38,7 @@ Page({
       console.log('success')
       console.log(res)
       wx.redirectTo({
-        url: '../overview/overview',
+        url: '../index/index',
       })
     }).catch(err => {
       console.log('error')
@@ -50,6 +48,9 @@ Page({
         image: 'assets/failed.svg'
       })
     });
+    // wx.redirectTo({
+    //   url: '../overview/overview',
+    // })
   },
 
   input_student_id: function(e) {
@@ -77,22 +78,20 @@ Page({
         }
       }
     });
+    wx.cloud.callFunction({
+      name: 'getStuentInfo',
+      data: {
+        student_id: "152040135100" 
+      }
+    }).then(res => {
+      app.globalData.studentInfo = res.result.data[0];
+    });
   },
 
   /**
    * Lifecycle function--Called when page is initially rendered
    */
   onReady: function () {
-    // wx.login({
-    //   success: res => {
-    //     wx.request({
-    //       url: apis.login,
-    //       data: {
-    //         js_code: res.code
-    //       }
-    //     })
-    //   }
-    // })
   },
 
   /**

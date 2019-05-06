@@ -10,14 +10,14 @@
   <view class='setting' bindtap='openSetting'>
   <picker mode='selector' bindchange='doChange' range='{{selectorRange}}'>
     <view>
-      <image class='setting-btn' src='./assets/setting.png'></image>
+      <image class='setting-btn' src='../assets/setting.png'></image>
     </view>
   </picker>
   </view>
-
+<!-- 
   <view class='next' bindtap='next'>
-    <image class='setting-btn' src='./assets/right-arrow.png'></image>
-  </view>
+    <image class='setting-btn' src='../assets/right-arrow.png'></image>
+  </view> -->
 
   
 </view>

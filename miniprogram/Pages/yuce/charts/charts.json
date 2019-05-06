@@ -1,0 +1,8 @@
+{
+  "navigationBarBackgroundColor": "#46b8ff",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "发展预测",
+  "usingComponents": {
+    "ec-canvas": "../../../ec-canvas/ec-canvas"
+  }
+}

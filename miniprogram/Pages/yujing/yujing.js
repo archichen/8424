@@ -14,36 +14,6 @@ Page({
       lazyLoad: true
     }
   },
-
-  openSetting: function() {
-    console.log("hello world")
-  },
-
-  doChange: function(e) {
-    this.setData({
-      selectIndex: e.detail.value
-    });
-    let scores = this.getScoresPie(this.data.selectorRange[e.detail.value]);
-    console.log(scores)
-    this.chart.setOption({
-      series: [
-        {
-          name: '课程成绩',
-          type: 'pie',
-          radius: '55%',
-          center: ['50%', '60%'],
-          data: scores,
-          itemStyle: {
-            emphasis: {
-              shadowBlur: 10,
-              shadowOffsetX: 0,
-              shadowColor: 'rgba(0, 0, 0, 0.5)'
-            }
-          }
-        }
-      ]
-    });
-  },
   
   /**
    * 生命周期函数--监听页面加载
@@ -95,52 +65,81 @@ Page({
         ]
       };
 
-      this.chart.setOption(option);
+      this.chart.setOption(this.getOption());
       return this.chart;
     });
   },
 
-  getScores: function(time) {
-    let result = {};
-    if (time === "历年成绩") {
-      for (let key in app.globalData.studentInfo.score) {
-        result = { ...result, ...app.globalData.studentInfo.score[key] };
-      }
-    } else {
-      time = time.substring(0, time.length - 2);
-      result = app.globalData.studentInfo.score[time];
-    }
-    return result;
-  },
-
-  getScoresPie: function (time) {
-    let result = [];
-    if (time === "历年成绩") {
-      for (let key in app.globalData.studentInfo.score) {
-        for(let k in app.globalData.studentInfo.score[key]) {
-          result.push({name: k, value: app.globalData.studentInfo.score[key][k]});
+  getOption() {
+    let json = app.globalData.yujing;
+    let option = {
+      animationDurationUpdate: 1500,
+      animationEasingUpdate: 'quinticInOut',
+      series: [{
+        type: 'graph',
+        layout: 'force',
+        draggable: true,
+        force: {
+          //线的长度
+          repulsion: 400
+        },
+        data: json.nodes.map(function (node) {
+          return {
+            id: node.id,
+            name: node.label,
+            symbolSize: 18,
+            itemStyle: {
+              normal: {
+                color: node.color
+              }
+            }
+          };
+        }),
+        edges: json.edges.map(function (edge) {
+          return {
+            source: edge.sourceID,
+            target: edge.targetID
+          };
+        }),
+        label: {
+          emphasis: {
+            position: 'right',
+            show: true
+          },
+          normal: {
+            position: 'right',
+            show: true
+          }
+        },
+        roam: true,
+        edgeSymbol: ['circular', 'arrow'],
+        //箭头大小
+        edgeSymbolSize: [2, 8],
+        focusNodeAdjacency: true,
+        lineStyle: {
+          normal: {
+            //线的宽度
+            width: 1,
+            //线的完全度
+            curveness: 0.3,
+            //线的不透明度
+            opacity: 1
+          }
         }
-      }
-    } else {
-      time = time.substring(0, time.length - 2);
-      let tmp = app.globalData.studentInfo.score[time];
-      for (let k in tmp) {
-        result.push({ name: k, value: tmp[k] });
-      }
-    }
-    return result;
+      }]
+    };
+    return option;
   },
 
-  next() {
+  loadYujingfenxiPage() {
     wx.navigateTo({
-      url: './s2/s2',
+      url: './yujingfenxi/yujingfenxi',
     })
   },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    this.doChange({detail: {value: 0}});
   },
 
   /**
